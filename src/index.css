@@ -75,5 +75,7 @@ img {
 
 :root {
   --blue-grey-500: #7F8285;
+  --blue-grey-50: #F0F2F3;
   --white-500: #ffffff;
+  --red-600: #E00000;
 }
