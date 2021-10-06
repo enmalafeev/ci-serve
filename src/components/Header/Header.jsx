@@ -10,7 +10,7 @@ const Header = () => {
           <div className="header__logo">
             School CI server
           </div>
-          <Button label="Settings" btnColor="#F0F2F3" />
+          <Button label="Settings" btncolor="#E6E6E6" />
         </div>
       </div>
     </header>

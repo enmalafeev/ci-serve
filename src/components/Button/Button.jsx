@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './button.css';
 
 const Button = (props) => {
-  const { children, label, onClick, btnColor="grey", labelColor, type, disabled, style } = props;
+  const { children, label, onClick, btnColor, labelColor, type, disabled, style } = props;
   const [hover, setHover] = useState(false);
 
 	const toggleHover = () => {
