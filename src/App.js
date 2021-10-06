@@ -1,12 +1,11 @@
 import './App.css';
-import StartPage from './pages/StartPage';
+import routes from './routes';
+import { useRoutes } from 'hookrouter';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
-  return (
-    <div className="wrapper">
-      <StartPage />
-    </div>
-  );
+    const routeResult = useRoutes(routes);
+    return routeResult || <NotFoundPage />;
 }
 
 export default App;
