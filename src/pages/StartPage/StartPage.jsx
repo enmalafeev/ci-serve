@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import Button from '../components/Button/Button';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import Button from '../../components/Button/Button';
 import './startpage.css';
-import {ReactComponent as Settings} from '../assets/svg/settings.svg';
+import {ReactComponent as Settings} from '../../assets/svg/settings.svg';
 
 function StartPage () {
   return (
-    <>
+    <div className="wrapper">
       <Header />
       <main className="content">
         <div className="content-wrapper">
@@ -19,9 +19,9 @@ function StartPage () {
           </p>
           <Button btnColor="#FFCC00" label="Open Settings" />
         </div>
-      </main>
+      </main> 
       <Footer />
-    </>
+    </div>
    );
 }
 
