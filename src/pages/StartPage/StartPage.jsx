@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/Button/Button';
+import { navigate } from 'hookrouter';
 import './startpage.css';
 import {ReactComponent as Settings} from '../../assets/svg/settings.svg';
 
@@ -11,13 +12,13 @@ function StartPage () {
       <Header />
       <main className="content">
         <div className="content-wrapper">
-          <Settings class="content__icon"/>
+          <Settings className="content__icon"/>
           <p className="content__description">
             Configure repository connection
             <br/>
             and synchronization settings
           </p>
-          <Button btnColor="#FFCC00" label="Open Settings" />
+          <Button btnColor="#FFCC00" label="Open Settings" onClick={() => navigate('/settings')} />
         </div>
       </main> 
       <Footer />

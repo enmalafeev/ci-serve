@@ -1,10 +1,10 @@
 import React from 'react';
 import StartPage from './pages/StartPage/StartPage';
-import Settings from './pages/SettingsPage/Settings';
+import SettingsPage from './pages/SettingsPage/SettingsPage';
 
 const routes = {
   '/': () => <StartPage />,
-  '/settings': () => <Settings />,
+  '/settings': () => <SettingsPage />,
 };
 
 export default routes;
