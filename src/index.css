@@ -55,6 +55,11 @@ ul {
   margin: 0;
 }
 
+button {
+  padding: 0;
+  margin: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -78,4 +83,11 @@ img {
   --blue-grey-50: #F0F2F3;
   --white-500: #ffffff;
   --red-600: #E00000;
+  --color-bg-action: #FFCC00;
+  --color-bg-action-hovered: #F2C200;
+  --color-text: #000000;
+  --color-bg-control: #E6E6E6;
+  --color-bg-hover: #DBDBDB;
+  --color-border-focused: #B3B3B3;
+  --border-btn-color: #B38F00;
 }

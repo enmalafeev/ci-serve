@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from  '../Button/Button';
 import './header.css';
 
 const Header = () => {
@@ -9,9 +10,7 @@ const Header = () => {
           <div className="header__logo">
             School CI server
           </div>
-          <a href="#">
-            Settings
-          </a>
+          <Button label="Settings" btnColor="#F0F2F3" />
         </div>
       </div>
     </header>
