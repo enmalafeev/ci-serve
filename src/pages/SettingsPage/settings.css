@@ -5,8 +5,11 @@
 }
 
 .settings__wrapper {
+  min-width: 288px;
   width: 824px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .settings__title {
@@ -23,22 +26,25 @@
 }
 
 .settings-form {
-  width: 474px;
+  min-width: 288px;
+  width: 57%;
 }
 
 .settings-form__field {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
 .settings-form--row {
+  flex: 1 1 auto;
   flex-direction: row;
   align-items: center;
 }
 
 .settings-form--narrow {
-  width: 115px;
+  width: 157px;
   justify-content: space-between;
 }
 

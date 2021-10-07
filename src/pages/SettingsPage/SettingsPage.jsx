@@ -10,7 +10,7 @@ function SettingsPage() {
       <Header />
       <main className="settings">
         <div className="settings__wrapper">
-          <h3 settings__title>Settings</h3>
+          <h3 className="settings__title">Settings</h3>
           <p className="settings__description">Configure repository connection and synchronization settings.</p>
           <form action="" className="settings-form">
             <div className="settings-form__field">
