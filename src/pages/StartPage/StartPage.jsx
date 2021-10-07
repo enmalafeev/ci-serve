@@ -12,13 +12,15 @@ function StartPage () {
       <Header />
       <main className="content">
         <div className="content-wrapper">
-          <Settings className="content__icon"/>
+          <Settings className="content__icon" />
           <p className="content__description">
             Configure repository connection
             <br/>
             and synchronization settings
           </p>
-          <Button btnColor="#FFCC00" label="Open Settings" onClick={() => navigate('/settings')} />
+          <Button type="primary"onClick={() => navigate('/settings')}>
+            <span>Open Settings</span>
+          </Button>
         </div>
       </main> 
       <Footer />

@@ -96,4 +96,8 @@ img {
   --border-btn-color: #B38F00;
   --color-red-500: #FF3333;
   --color-bg-heavy: #D9D9D9;
+  --color-bg-disabled: #F2F2F2;
+  --color-text-disabled: #7F7F7F;
+  --color-bg-base: rgba(0, 0, 0, 0.2);
+  --color-text-second: #CCCCCC;
 }

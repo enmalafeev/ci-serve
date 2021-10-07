@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from  '../Button/Button';
 import './header.css';
+import {ReactComponent as GearIcon} from '../../assets/svg/gear.svg';
 
 const Header = () => {
   return ( 
@@ -10,7 +11,10 @@ const Header = () => {
           <div className="header__logo">
             School CI server
           </div>
-          <Button label="Settings" btncolor="#E6E6E6" />
+          <Button type="accent" size="small">
+            <GearIcon />
+            <span className="icon-label">Settings</span>
+          </Button>
         </div>
       </div>
     </header>

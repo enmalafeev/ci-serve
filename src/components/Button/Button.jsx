@@ -1,59 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './button.css';
 
 const Button = (props) => {
-  const { children, label, onClick, btnColor, labelColor, type, disabled, style } = props;
-  const [hover, setHover] = useState(false);
+  const { children, onClick, type, size } = props;
 
-	const toggleHover = () => {
-		setHover(!hover);
-	};
-  const mainStyles = {
-		backgroundColor: btnColor,
-		color: labelColor || 'white'
-	};
-	const outlineStyles = {
-		border: `1px solid ${btnColor}`,
-		color: btnColor,
-		backgroundColor : 'white'
-	};
-  const disabledStyle = {
-		cursor: 'default',
-		backgroundColor: btnColor,
-		color: labelColor || 'black',
-		opacity: 0.4
-	};
-
-  let btnStyle;
-	switch (type) {
-		case 'main':
-			btnStyle = mainStyles;
-			break;
-		case 'outline':
-			btnStyle = outlineStyles;
-			break;
-		default:
-			btnStyle = {
-				backgroundColor: btnColor,
-				color: labelColor || 'black'
-			};
-			break;
+	const btnTypes = {
+		primary: 'primary',
+		accent: 'accent',
+		outline: 'outline',
+		disabled: 'disabled'
 	}
 
+	const SIZES = {
+		small: 'small',
+	}
+
+	const setBtnType = (type) => btnTypes[type];
+
+	const setBtnSize = (size) => SIZES[size];
+
+	const checkBtnSize = setBtnSize(size) ? SIZES[size] : '';
+
   return ( 
-    <button className="btn" style={
-      disabled ? { ...mainStyles, ...btnStyle, ...disabledStyle, ...style } :
-      { ...mainStyles, ...btnStyle, ...style }
-      }
-      onMouseEnter={toggleHover}
-      onMouseLeave={toggleHover}
+    <button
+			className={`btn ${setBtnType(type)} ${checkBtnSize}`}
       {...props}
       type="button"
-      onClick={
-        !disabled ? onClick :
-        () => {}
-      }>{children || label}</button>
-    );
+			disabled={setBtnType(type) === 'disabled'}
+      onClick={setBtnType(type) === 'disabled' ? () => {} : onClick}>
+				{children}
+		</button>
+  );
 }
 
 export default Button;

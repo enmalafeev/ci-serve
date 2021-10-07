@@ -31,8 +31,12 @@ function SettingsPage() {
               <p className="settings-form__caption">minutes</p>
             </div>
             <div className="settings-form__field settings-form--row settings-form--narrow">
-              <Button label="Save" btnColor="#FFCC00" />
-              <Button label="Cancel" />
+              <Button type="primary">
+                <span>Save</span>
+              </Button>
+              <Button type="accent">
+                <span>Cancel</span>
+              </Button>
             </div>
           </form>
         </div>

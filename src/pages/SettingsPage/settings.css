@@ -44,7 +44,7 @@
 }
 
 .settings-form--narrow {
-  width: 157px;
+  width: 160px;
   justify-content: space-between;
 }
 
@@ -88,4 +88,8 @@
 #sync {
   width: 52px;
   height: 36px;
+}
+
+.icon-label {
+  margin-left: 6px;
 }
