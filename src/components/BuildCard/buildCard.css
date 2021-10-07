@@ -1,0 +1,98 @@
+.build-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 288px;
+  max-width: 824px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.build-card {
+  width: 100%;
+  padding: 12px 24px;
+  background: var(--white-500);
+  box-shadow: 0px 0px 1px rgba(67, 68, 69, 0.3), 0px 1px 1px rgba(67, 68, 69, 0.3);
+  border-radius: 6px;
+}
+
+.build-card:hover {
+  box-shadow: 0px 0px 1px rgba(67, 68, 69, 0.3), 0px 2px 8px rgba(67, 68, 69, 0.3);
+}
+
+.build {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.build-general-info {
+  padding-left: 8px;
+  padding-right: 8px;
+  max-width: 55%;
+}
+
+.build__header {
+  margin-bottom: 8px;
+}
+
+.build__header,
+.build-info,
+.build-repo,
+.build-commiter,
+.build-date,
+.build-duration {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
+.build-icon {
+  opacity: 0.3;
+}
+
+.build-time--icon-gap-left {
+  padding-left: 4px;
+}
+
+.build-info {
+  gap: 10px;
+}
+
+.build-time {
+  margin-left: auto;
+}
+
+.build__number {
+  color: var(--color-green);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.build__title {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.build-repo__hash {
+  color: var(--color-text);
+  opacity: 0.65;
+}
+
+.build-repo__branch,
+.build-commiter__name,
+.build-repo__hash,
+.build-time__date,
+.build-duration__period {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+
+
