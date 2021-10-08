@@ -25,7 +25,7 @@ const Footer = () => {
             {footerMenu.map(({ id, name }) => <a href={`#${name}`} key={id} className="footer__link">{ name }</a>)}
           </nav>
           <div className="footer__copyright">
-            © 2020 Your Name
+            © 2021 Evgeny Malafeev
           </div>
         </div>
       </div>

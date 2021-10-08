@@ -82,6 +82,7 @@ img {
   padding-right: 16px;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -108,5 +109,16 @@ img {
   --color-green: #00B341;
   --color-red: #FF3333;
   --color-orange: #FF9A00;
+}
 
+@media (max-width: 480px) {
+  .icon-label {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer__menu {
+    margin-bottom: 8px;
+  }
 }
