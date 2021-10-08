@@ -18,7 +18,7 @@ function StartPage () {
             <br/>
             and synchronization settings
           </p>
-          <Button type="primary"onClick={() => navigate('/settings')}>
+          <Button type="primary" onClick={() => navigate('/settings')}>
             <span>Open Settings</span>
           </Button>
         </div>

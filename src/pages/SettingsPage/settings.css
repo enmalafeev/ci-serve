@@ -1,12 +1,12 @@
 .settings {
   flex: 1;
   display: flex;
-  margin: auto;
 }
 
 .settings__wrapper {
-  min-width: 288px;
-  width: 824px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 824px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
@@ -94,3 +94,17 @@
 .icon-label {
   margin-left: 6px;
 }
+
+@media (max-width: 480px) {
+  .settings__wrapper {
+    flex-basis: 100%;
+  }
+  .settings-form {
+    width: 100%;
+  }
+  .settings-form--narrow  {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
