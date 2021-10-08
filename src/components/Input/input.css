@@ -1,0 +1,29 @@
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input__label {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.input__field {
+  border: 2px solid var(--color-bg-heavy);
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 13px;
+  margin-right: 8px;
+}
+
+.input__field:focus,
+.input__field:active {
+  outline: 0;
+  border: 2px solid var(--color-border-focused);
+}

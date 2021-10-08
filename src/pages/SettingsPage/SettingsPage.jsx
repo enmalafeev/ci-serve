@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/Button/Button';
+import Input from '../../components/Input/Input';
 import './settings.css';
 
 function SettingsPage() {
@@ -13,18 +14,9 @@ function SettingsPage() {
           <h3 className="settings__title">Settings</h3>
           <p className="settings__description">Configure repository connection and synchronization settings.</p>
           <form action="" className="settings-form">
-            <div className="settings-form__field">
-              <label className="settings-form__label" htmlFor="repo">GitHub repository <span className="settings-form__required">*</span></label>
-              <input className="settings-form__input" type="text" placeholder="user-name/repo-name" id="repo" required />
-            </div>
-            <div className="settings-form__field">
-              <label className="settings-form__label" htmlFor="command">Build command <span className="settings-form__required">*</span></label>
-              <input className="settings-form__input" type="text" placeholder="enter command" id="command" required />
-            </div>
-            <div className="settings-form__field">
-              <label className="settings-form__label" htmlFor="branch">Main branch</label>
-              <input className="settings-form__input" type="text" placeholder="branch name" id="branch" />
-            </div>
+            <Input label="GitHub repository *" placeholder="user-name/repo-name" required />
+            <Input label="Build command *" placeholder="enter command" required />
+            <Input label="Main branch" placeholder="branch name"/>
             <div className="settings-form__field settings-form--row">
               <label className="settings-form__label" htmlFor="sync">Synchronize every</label>
               <input className="settings-form__input" type="number" id="sync" />
