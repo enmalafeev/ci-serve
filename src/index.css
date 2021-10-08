@@ -55,6 +55,10 @@ ul {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 button {
   padding: 0;
   margin: 0;
@@ -100,4 +104,9 @@ img {
   --color-text-disabled: #7F7F7F;
   --color-bg-base: rgba(0, 0, 0, 0.2);
   --color-text-second: #CCCCCC;
+
+  --color-green: #00B341;
+  --color-red: #FF3333;
+  --color-orange: #FF9A00;
+
 }

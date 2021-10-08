@@ -1,14 +1,3 @@
-.build-card-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 288px;
-  max-width: 824px;
-  margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
 .build-card {
   width: 100%;
   padding: 12px 24px;
