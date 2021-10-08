@@ -11,10 +11,12 @@ const Header = () => {
           <div className="header__logo">
             School CI server
           </div>
-          <Button type="accent" size="small">
-            <GearIcon />
-            <span className="icon-label">Settings</span>
-          </Button>
+          <div className="header__icon">
+            <Button type="accent" size="small">
+              <GearIcon />
+              <span className="icon-label">Settings</span>
+            </Button>
+          </div>
         </div>
       </div>
     </header>

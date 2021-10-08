@@ -111,10 +111,6 @@ img {
   --color-orange: #FF9A00;
 }
 
-@media (max-width: 768px) {
-
-}
-
 @media (max-width: 480px) {
   .icon-label {
     display: none;

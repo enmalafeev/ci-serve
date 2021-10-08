@@ -14,9 +14,11 @@ function BuildHeader() {
             <PlayIcon />
             <span className="icon-label">Run build</span>
           </Button>
-          <Button type="accent" size="small">
-            <GearIcon />
-          </Button>
+          <div className="button-group__settings-btn">
+            <Button type="accent" size="small">
+              <GearIcon />
+            </Button>
+          </div> 
         </div>
       </div>
     </header>

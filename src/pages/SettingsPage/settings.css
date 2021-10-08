@@ -44,8 +44,9 @@
 }
 
 .settings-form--narrow {
-  width: 160px;
+  width: 19%;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .settings-form__label {
