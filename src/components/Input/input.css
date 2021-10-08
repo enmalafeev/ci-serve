@@ -1,4 +1,5 @@
 .input-wrapper {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6,6 +7,7 @@
 }
 
 .input__label {
+  width: 100%;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -26,4 +28,10 @@
 .input__field:active {
   outline: 0;
   border: 2px solid var(--color-border-focused);
+}
+
+.input__close-icon {
+  position: absolute;
+  top: 32px;
+  right: 20px;
 }
