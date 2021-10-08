@@ -1,5 +1,18 @@
 .build-content {
   flex: 1;
+}
+
+.build-container {
   display: flex;
-  margin: auto;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 288px;
+  max-width: 824px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.build-btn-group {
+  padding-bottom: 20px;
 }
