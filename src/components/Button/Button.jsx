@@ -2,7 +2,7 @@ import React from 'react';
 import './button.css';
 
 const Button = (props) => {
-  const { children, onClick, type, size } = props;
+  const { children, onClick, type, btnType='button', size } = props;
 
 	const btnTypes = {
 		primary: 'primary',
@@ -25,7 +25,7 @@ const Button = (props) => {
     <button
 			className={`btn ${setBtnType(type)} ${checkBtnSize}`}
       {...props}
-      type="button"
+      type={btnType}
 			disabled={setBtnType(type) === 'disabled'}
       onClick={setBtnType(type) === 'disabled' ? () => {} : onClick}>
 				{children}

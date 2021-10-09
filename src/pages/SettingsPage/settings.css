@@ -47,6 +47,7 @@
   width: 19%;
   justify-content: space-between;
   gap: 8px;
+  margin-top: 24px;
 }
 
 .settings-form__label {
@@ -86,13 +87,17 @@
   color: var(--color-bg-heavy);
 }
 
-#sync {
+#syncTime {
   width: 52px;
   height: 36px;
 }
 
 .icon-label {
   margin-left: 6px;
+}
+
+.error {
+  color: var(--color-red-500);
 }
 
 @media (max-width: 480px) {

@@ -3,9 +3,36 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
+import { useFormik } from 'formik';
 import './settings.css';
 
+const validate = values => {
+  const errors = {};
+  if (!values.repoName) {
+    errors.repoName = 'Required';
+  }
+
+  if (!values.command) {
+    errors.command = 'Required';
+  }
+
+  return errors;
+};
+
 function SettingsPage() {
+  const formik = useFormik({
+    initialValues: {
+      repoName: '',
+      command: '',
+      branchName: '',
+      syncTime: 0
+    },
+    validate,
+    onSubmit: (values, {resetForm}) => {
+      console.log(JSON.stringify(values, null, 2));
+      resetForm({values: ''});
+    },
+  });
   return ( 
     <div className="wrapper">
       <Header />
@@ -13,17 +40,55 @@ function SettingsPage() {
         <div className="settings__wrapper">
           <h3 className="settings__title">Settings</h3>
           <p className="settings__description">Configure repository connection and synchronization settings.</p>
-          <form action="" className="settings-form">
-            <Input label="GitHub repository *" placeholder="user-name/repo-name" required />
-            <Input label="Build command *" placeholder="enter command" required />
-            <Input label="Main branch" placeholder="branch name"/>
+          <form className="settings-form" onSubmit={formik.handleSubmit}>
+            <Input
+              id="repoName"
+              name="repoName"
+              type="text"
+              label="GitHub repository *"
+              placeholder="user-name/repo-name"
+              onChange={formik.handleChange}
+              clearInput={() => formik.setFieldValue('repoName', '')}
+              value={formik.values.repoName}
+            />
+            {formik.errors.repoName ? <div className="error">{formik.errors.repoName}</div> : null}
+            <Input
+              id="command"
+              name="command"
+              type="text"
+              label="Build command *"
+              placeholder="enter command"
+              onChange={formik.handleChange}
+              clearInput={() => formik.setFieldValue('command', '')}
+              value={formik.values.command}
+            />
+            {formik.errors.command ? <div className="error">{formik.errors.command}</div> : null}
+            <Input 
+              id="branchName"
+              name="branchName" 
+              type="text" 
+              label="Main branch" 
+              placeholder="branch name"
+              onChange={formik.handleChange}
+              clearInput={() => formik.setFieldValue('branchName', '')}
+              value={formik.values.branchName}
+            />
             <div className="settings-form__field settings-form--row">
               <label className="settings-form__label" htmlFor="sync">Synchronize every</label>
-              <input className="settings-form__input" type="number" id="sync" />
+              <input
+                id="syncTime"
+                name="syncTime"
+                className="settings-form__input"
+                type="number"
+                min="1"
+                max="999"
+                onChange={formik.handleChange}
+                value={formik.values.syncTime}  
+              />
               <p className="settings-form__caption">minutes</p>
             </div>
             <div className="settings-form__field settings-form--row settings-form--narrow">
-              <Button type="primary">
+              <Button type="primary" btnType="submit">
                 <span>Save</span>
               </Button>
               <Button type="accent">
