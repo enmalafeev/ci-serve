@@ -105,6 +105,7 @@ img {
   --color-text-disabled: #7F7F7F;
   --color-bg-base: rgba(0, 0, 0, 0.2);
   --color-text-second: #CCCCCC;
+  --color-bg-modal: rgba(0, 0, 0, 0.4);
 
   --color-green: #00B341;
   --color-red: #FF3333;
