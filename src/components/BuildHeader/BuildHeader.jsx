@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button';
 import './buildHeader.css';
+import { navigate } from 'hookrouter';
 import {ReactComponent as PlayIcon} from '../../assets/svg/play.svg';
 import {ReactComponent as GearIcon} from '../../assets/svg/gear.svg'
 
@@ -15,7 +16,7 @@ function BuildHeader() {
             <span className="icon-label">Run build</span>
           </Button>
           <div className="button-group__settings-btn">
-            <Button type="accent" size="small">
+            <Button type="accent" size="small" onClick={() => navigate('/settings')}>
               <GearIcon />
             </Button>
           </div> 

@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
+import { navigate } from 'hookrouter';
 import { useFormik } from 'formik';
 import './settings.css';
 
@@ -29,10 +30,15 @@ function SettingsPage() {
     },
     validate,
     onSubmit: (values, {resetForm}) => {
-      console.log(JSON.stringify(values, null, 2));
+      localStorage.setItem('settings', JSON.stringify(values));
       resetForm({values: ''});
+      navigate('/build');
     },
   });
+  const cancelHandle = () => {
+    localStorage.removeItem('settings');
+    formik.resetForm({ values: ''});
+  }
   return ( 
     <div className="wrapper">
       <Header />
@@ -91,7 +97,7 @@ function SettingsPage() {
               <Button type="primary" btnType="submit">
                 <span>Save</span>
               </Button>
-              <Button type="accent">
+              <Button type="accent" onClick={cancelHandle}>
                 <span>Cancel</span>
               </Button>
             </div>
