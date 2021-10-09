@@ -11,3 +11,5 @@ Used technologies:
 For start app use this command:
 `yarn start`
 
+See the app here:
+[CI-server app](https://ci-serve.vercel.app/)
