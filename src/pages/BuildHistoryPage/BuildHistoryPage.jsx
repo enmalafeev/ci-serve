@@ -4,11 +4,13 @@ import Footer from '../../components/Footer/Footer';
 import BuildHeader from '../../components/BuildHeader/BuildHeader';
 import BuildCard from '../../components/BuildCard/BuildCard';
 import Button from '../../components/Button/Button';
+import { useSelector } from 'react-redux';
 
 function BuildHistoryPage() {
+  const repoName = useSelector((state) => state.settings.settings.repoName);
   return (
     <div className="wrapper">
-      <BuildHeader />
+      {repoName && <BuildHeader title={repoName} />}
       <main className="build-content">
         <div className="build-container">
           {Array.from({length: 10}, (_, i) => i + 1).map((item, index) => <BuildCard key={index} />)}

@@ -7,14 +7,14 @@ import {ReactComponent as GearIcon} from '../../assets/svg/gear.svg'
 import Modal from '../Modal/Modal';
 import Input from '../Input/Input';
 
-function BuildHeader() {
+function BuildHeader({ title }) {
   const [showModal, setModal] = useState(false);
   const [hash, setHash] = useState('');
   const toggleModal = () => setModal(!showModal);
   return (
     <header className="build-header">
       <div className="container">
-        <h2 className="build-header__title">philip1967/my-awesome-repo</h2>
+        <h2 className="build-header__title">{title}</h2>
         <div className="button-group">
           <Button type="accent" size="small" onClick={() => toggleModal()}>
             <PlayIcon />

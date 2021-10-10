@@ -5,6 +5,8 @@ import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
 import { navigate } from 'hookrouter';
 import { useFormik } from 'formik';
+import { useDispatch } from 'react-redux';
+import { actions } from '../../slices/settings';
 import './settings.css';
 
 const validate = values => {
@@ -21,6 +23,8 @@ const validate = values => {
 };
 
 function SettingsPage() {
+  const dispatch = useDispatch();
+
   const formik = useFormik({
     initialValues: {
       repoName: '',
@@ -30,13 +34,13 @@ function SettingsPage() {
     },
     validate,
     onSubmit: (values, {resetForm}) => {
-      localStorage.setItem('settings', JSON.stringify(values));
+      dispatch(actions.setSettings(values));
       resetForm({values: ''});
       navigate('/build');
     },
   });
   const cancelHandle = () => {
-    localStorage.removeItem('settings');
+    dispatch(actions.setSettings(null));
     formik.resetForm({ values: ''});
   }
   return ( 
