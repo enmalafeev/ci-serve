@@ -6,17 +6,22 @@ import {ReactComponent as PlayIcon} from '../../assets/svg/play.svg';
 import {ReactComponent as GearIcon} from '../../assets/svg/gear.svg'
 import Modal from '../Modal/Modal';
 import Input from '../Input/Input';
+import { useDispatch, useSelector } from 'react-redux';
+import { actions } from '../../slices/modal';
 
 function BuildHeader({ title }) {
-  const [showModal, setModal] = useState(false);
+  const dispatch = useDispatch();
+  const isVisible = useSelector((state) => state.modal.isVisible);
+  const showModal = () => dispatch(actions.changeVisibilty(true));
+  const closeModal = () => dispatch(actions.changeVisibilty(false));
+
   const [hash, setHash] = useState('');
-  const toggleModal = () => setModal(!showModal);
   return (
     <header className="build-header">
       <div className="container">
         <h2 className="build-header__title">{title}</h2>
         <div className="button-group">
-          <Button type="accent" size="small" onClick={() => toggleModal()}>
+          <Button type="accent" size="small" onClick={() => showModal()}>
             <PlayIcon />
             <span className="icon-label">Run build</span>
           </Button>
@@ -27,7 +32,7 @@ function BuildHeader({ title }) {
           </div> 
         </div>
       </div>
-      <Modal show={showModal} close={toggleModal} title="New build">
+      <Modal show={isVisible} close={closeModal} title="New build">
         <Input
           value={hash}
           onChange={(e) => setHash(e.target.value)}
