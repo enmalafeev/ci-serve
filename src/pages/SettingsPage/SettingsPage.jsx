@@ -106,7 +106,7 @@ function SettingsPage() {
       </main>
       <Footer />
     </div>
-   );
+  );
 }
 
 export default SettingsPage;
