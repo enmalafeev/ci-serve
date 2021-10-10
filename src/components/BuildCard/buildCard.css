@@ -40,7 +40,7 @@
 }
 
 .build__header {
-  align-items: top;
+  align-items: flex-start;
 }
 
 .build-icon {
