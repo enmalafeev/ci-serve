@@ -22,12 +22,12 @@ const Button = (props) => {
 	const checkBtnSize = setBtnSize(size) ? SIZES[size] : '';
 
   return ( 
-    <button
+		<button
 			className={`btn ${setBtnType(type)} ${checkBtnSize}`}
-      {...props}
-      type={btnType}
+			{...props}
+			type={btnType}
 			disabled={setBtnType(type) === 'disabled'}
-      onClick={setBtnType(type) === 'disabled' ? () => {} : onClick}>
+			onClick={setBtnType(type) === 'disabled' ? () => {} : onClick}>
 				{children}
 		</button>
   );
