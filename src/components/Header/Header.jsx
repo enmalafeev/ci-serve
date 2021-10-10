@@ -10,8 +10,8 @@ const Header = () => {
     <header className="header">
       <div className="header__content">
         <div className="container">
-          <div>
-            <a href={() => false} className="header__logo" onClick={() => navigate('/')}>School CI server</a>
+          <div className="header__logo" onClick={() => navigate('/')}>
+            School CI server
           </div>
           { path !== '/settings' && <div className="header__icon">
             <Button type="accent" size="small" onClick={() => navigate('/settings')}>
