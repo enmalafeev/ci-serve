@@ -3,15 +3,16 @@ import './button.css';
 
 const Button = (props) => {
   const { children, onClick, type, btnType='button', size } = props;
-	const btnTypes = {
-		primary: 'primary',
-		accent: 'accent',
-		outline: 'outline',
-		disabled: 'disabled'
-	}
+  const btnTypes = {
+    primary: 'primary',
+    accent: 'accent',
+    outline: 'outline',
+    disabled: 'disabled'
+  }
+
   const SIZES = {
     small: 'small',
-	}
+  }
 
   const setBtnType = (type) => btnTypes[type];
 
