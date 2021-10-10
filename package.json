@@ -43,8 +43,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write",
-    "*.js": "eslint --cache --fix"
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "husky": "^7.0.2",
