@@ -27,12 +27,9 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <div id="modal"></div>
     <script src="../metricCounter/send.js"></script>
     <script type="module">
-      import { getLCP, getFCP, getCLS}  from 'web-vitals/base';
+      import { getLCP, getFCP, getCLS}  from 'https://unpkg.com/web-vitals?module';
 
       let counter = new Counter();
 
@@ -51,6 +48,10 @@
       counter.send('Largest Contentful Paint (LCP)', getLCP(console.log));
       counter.send('Cumulative layout shift (CLS)', getCLS(console.log));
     </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="modal"></div>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
