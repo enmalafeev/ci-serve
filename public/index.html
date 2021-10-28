@@ -30,6 +30,28 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="modal"></div>
+    <script src="../metricCounter/send.js"></script>
+    <script type="module">
+      import { getLCP, getFCP, getCLS}  from 'web-vitals';
+
+      let counter = new Counter();
+
+      const counterId = '97e1b95b-c293-4219-bb8f-233e3e65e0be';
+
+      counter.init(counterId, String(Math.random()).substr(2, 12), 'main');
+      counter.setAdditionalParams({
+        env: 'production',
+        platform: 'touch'
+      });
+
+      counter.send('load', PerformanceNavigationTiming.loadEventEnd - PerformanceNavigationTiming.loadEventStart);
+      counter.send('domLoaded', PerformanceNavigationTiming.domContentLoadedEventEnd - PerformanceNavigationTiming.domContentLoadedEventStart);
+
+      counter.send('First Contentful Paint (FCP)', getFCP(console.log));
+      counter.send('Largest Contentful Paint (LCP)', getLCP(console.log));
+      counter.send('Cumulative layout shift (CLS)', getCLS(console.log));
+    </script>
+    <script src="../metricCounter/stats.js"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
