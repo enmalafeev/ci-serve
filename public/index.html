@@ -29,7 +29,7 @@
   <body>
     <script src="../metricCounter/send.js"></script>
     <script type="module">
-      import { getLCP, getFCP, getCLS}  from 'https://unpkg.com/web-vitals?module';
+      // import { getLCP, getFCP, getCLS}  from 'https://unpkg.com/web-vitals?module';
 
       let counter = new Counter();
 
@@ -44,9 +44,9 @@
       counter.send('load', PerformanceNavigationTiming.loadEventEnd - PerformanceNavigationTiming.loadEventStart);
       counter.send('domLoaded', PerformanceNavigationTiming.domContentLoadedEventEnd - PerformanceNavigationTiming.domContentLoadedEventStart);
 
-      counter.send('First Contentful Paint (FCP)', getFCP(console.log));
-      counter.send('Largest Contentful Paint (LCP)', getLCP(console.log));
-      counter.send('Cumulative layout shift (CLS)', getCLS(console.log));
+      // counter.send('First Contentful Paint (FCP)', getFCP(console.log));
+      // counter.send('Largest Contentful Paint (LCP)', getLCP(console.log));
+      // counter.send('Cumulative layout shift (CLS)', getCLS(console.log));
     </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
